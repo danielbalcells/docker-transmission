@@ -38,9 +38,9 @@ EXPOSE 51000-52000
 
 # Include bash configuration repo
 ADD     bashrc /home/transmission-user/.bashrc
-RUN     mkdir /home/transmission-user/.bash && \
-        git clone https://github.com/danielbalcells/.bash.git \
-		/home/transmission-user/.bash
+RUN     mkdir /home/transmission-user/dotfiles && \
+        git clone https://github.com/danielbalcells/dotfiles.git \
+		/home/transmission-user/dotfiles
 
 # Include start transmission script
 ADD     start-transmission.sh /home/transmission-user/start-transmission.sh
